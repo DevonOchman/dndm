@@ -9,6 +9,7 @@ public class SMConditionFactory extends SMFactory {
 	private static SMConditionFactory instance;
 
 	private SMConditionFactory(){
+		super("Conditions.json");
 		this.typeReference = new TypeReference<List<SMCondition>>(){};
 	}
 

@@ -9,6 +9,7 @@ public class SMLanguageFactory extends SMFactory {
 	private static SMLanguageFactory instance;
 
 	private SMLanguageFactory(){
+		super("Languages.json");
 		this.typeReference = new TypeReference<List<SMLanguage>>(){};
 	}
 

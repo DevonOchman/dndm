@@ -9,6 +9,7 @@ public class SMSkillFactory extends SMFactory {
 	private static SMSkillFactory instance;
 
 	private SMSkillFactory(){
+		super("Skills.json");
 		this.typeReference = new TypeReference<List<SMSkill>>(){};
 	}
 

@@ -7,6 +7,7 @@ public class SMMonsterFactory extends SMFactory {
 	private static SMMonsterFactory instance;
 	
 	private SMMonsterFactory(){
+		super("Monsters.json");
 		this.typeReference = new TypeReference<List<SMMonster>>(){};
 	}
 

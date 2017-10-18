@@ -33,8 +33,9 @@ import dnd.dm.model.source.SMProficiencyFactory;
 import dnd.dm.model.source.SMSkillFactory;
 import dnd.dm.model.source.SMSubclassFactory;
 import dnd.dm.model.source.SMFactory;
+import dnd.dm.model.source.SMFeatureFactory;
 import dnd.dm.model.source.SMLanguageFactory;
-import dnd.dm.model.source.SMWeaponPropertiesFactory;
+import dnd.dm.model.source.SMWeaponPropertyFactory;
 
 @Configuration
 @PropertySource(value = "classpath:modelSource.properties")
@@ -50,13 +51,14 @@ public class SourceModelLoader {
 	public SourceModelLoader() {
 		factories = new HashMap<String, SMFactory>();
 
+		//TODO change keys to /class/{i} et al.
 		factories.put("Monsters.json", SMMonsterFactory.getInstance());
 
 		factories.put("Conditions.json", SMConditionFactory.getInstance());
 
 		factories.put("Equipment.json", SMEquipmentFactory.getInstance());
 		factories.put("Damage-Types.json", SMDamageTypeFactory.getInstance());
-		factories.put("Weapon-Properties.json", SMWeaponPropertiesFactory.getInstance());
+		factories.put("Weapon-Properties.json", SMWeaponPropertyFactory.getInstance());
 		
 		factories.put("Equipment-Categories.json", SMEquipmentCategoryFactory.getInstance());
 		
@@ -67,7 +69,7 @@ public class SourceModelLoader {
 		
 		factories.put("Classes.json", SMClassFactory.getInstance());
 		factories.put("Subclasses.json", SMSubclassFactory.getInstance());
-//		factories.put("Classes.json", SMClassFactory.getInstance());
+		factories.put("Featues.json", SMFeatureFactory.getInstance());
 //		factories.put("Classes.json", SMClassFactory.getInstance());
 //		
 	}
@@ -77,7 +79,7 @@ public class SourceModelLoader {
 		try {
 			for (File jsonFile : getFilesInFolder(sourceModelJsonFolder)) {
 				for (Entry<String, SMFactory> e : factories.entrySet()) {
-					if (e.getKey().equals(jsonFile.getName())) {
+					if (e.getValue().getSourceFileName().equals(jsonFile.getName())) {
 						factories.get(e.getKey()).loadSMObjects(jsonFile);
 						log.info("Loaded data from: " + jsonFile.getPath());
 //						 System.out.println(factories.get(e.getKey()));

@@ -9,6 +9,7 @@ public class SMEquipmentCategoryFactory extends SMFactory {
 	private static SMEquipmentCategoryFactory instance;
 
 	private SMEquipmentCategoryFactory(){
+		super("Equipment-Categories.json");
 		this.typeReference = new TypeReference<List<SMEquipmentCategory>>(){};
 	}
 

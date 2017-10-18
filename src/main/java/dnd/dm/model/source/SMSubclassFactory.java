@@ -9,6 +9,7 @@ public class SMSubclassFactory extends SMFactory {
 	private static SMSubclassFactory instance;
 
 	private SMSubclassFactory(){
+		super("Subclasses.json");
 		this.typeReference = new TypeReference<List<SMSubclass>>(){};
 	}
 

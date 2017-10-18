@@ -9,6 +9,7 @@ public class SMProficiencyFactory extends SMFactory {
 	private static SMProficiencyFactory instance;
 
 	private SMProficiencyFactory(){
+		super("Proficiencies.json");
 		this.typeReference = new TypeReference<List<SMProficiency>>(){};
 	}
 

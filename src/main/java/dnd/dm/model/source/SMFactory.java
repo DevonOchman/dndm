@@ -15,6 +15,14 @@ public abstract class SMFactory {
 
 	private ObjectMapper mapper = new ObjectMapper();
 
+	private String sourceFileName;
+
+	//TODO get base URL
+	
+	public SMFactory(String sourceFileName) {
+		this.sourceFileName = sourceFileName;
+	}
+
 	@SuppressWarnings("rawtypes")
 	protected TypeReference typeReference;
 	// = new TypeReference<List<TTTT>>() {});
@@ -55,4 +63,15 @@ public abstract class SMFactory {
 		}
 	}
 
+	public String getSourceFileName() {
+		return sourceFileName;
+	}
+	
+	public boolean isEmpty(){
+		return smObjects.isEmpty();
+	}
+	
+	public int size(){
+		return smObjects.size();
+	}
 }

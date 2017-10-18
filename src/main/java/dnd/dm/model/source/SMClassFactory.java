@@ -10,6 +10,7 @@ public class SMClassFactory extends SMFactory {
 	private static SMClassFactory instance;
 
 	private SMClassFactory(){
+		super("Classes.json");
 		this.typeReference = new TypeReference<List<SMClass>>(){};
 	}
 

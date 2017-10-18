@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "desc", "index", "name", "url" })
-public class SMWeaponProperties implements SMObject {
+public class SMWeaponProperty implements SMObject {
 
 	@JsonProperty("desc")
 	private List<String> desc = null;

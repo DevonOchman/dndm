@@ -9,6 +9,7 @@ public class SMAbilityScoreFactory extends SMFactory {
 	private static SMAbilityScoreFactory instance;
 
 	private SMAbilityScoreFactory(){
+		super("Ability-Scores.json");
 		this.typeReference = new TypeReference<List<SMAbilityScore>>(){};
 	}
 

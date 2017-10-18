@@ -9,6 +9,7 @@ public class SMDamageTypeFactory extends SMFactory {
 	private static SMDamageTypeFactory instance;
 
 	private SMDamageTypeFactory(){
+		super("Damage-Types.json");
 		this.typeReference = new TypeReference<List<SMDamageType>>(){};
 	}
 
