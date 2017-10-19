@@ -30,11 +30,17 @@ import dnd.dm.model.source.SMEquipmentCategoryFactory;
 import dnd.dm.model.source.SMEquipmentFactory;
 import dnd.dm.model.source.SMMonsterFactory;
 import dnd.dm.model.source.SMProficiencyFactory;
+import dnd.dm.model.source.SMRaceFactory;
 import dnd.dm.model.source.SMSkillFactory;
+import dnd.dm.model.source.SMSpellFactory;
 import dnd.dm.model.source.SMSubclassFactory;
+import dnd.dm.model.source.SMSubraceFactory;
+import dnd.dm.model.source.SMTraitFactory;
 import dnd.dm.model.source.SMFactory;
 import dnd.dm.model.source.SMFeatureFactory;
 import dnd.dm.model.source.SMLanguageFactory;
+import dnd.dm.model.source.SMLevelFactory;
+import dnd.dm.model.source.SMMagicSchoolFactory;
 import dnd.dm.model.source.SMWeaponPropertyFactory;
 
 @Configuration
@@ -70,7 +76,14 @@ public class SourceModelLoader {
 		factories.put("Classes.json", SMClassFactory.getInstance());
 		factories.put("Subclasses.json", SMSubclassFactory.getInstance());
 		factories.put("Featues.json", SMFeatureFactory.getInstance());
-//		factories.put("Classes.json", SMClassFactory.getInstance());
+		factories.put("Levels.json", SMLevelFactory.getInstance());
+		
+		factories.put("Races.json", SMRaceFactory.getInstance());
+		factories.put("Subraces.json", SMSubraceFactory.getInstance());
+		factories.put("Traits.json", SMTraitFactory.getInstance());
+		
+		factories.put("Spells.json", SMSpellFactory.getInstance());
+		factories.put("Magic-Schools.json", SMMagicSchoolFactory.getInstance());
 //		
 	}
 
