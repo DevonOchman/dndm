@@ -292,5 +292,102 @@
 		"traits": [],
 		"subraces": [],
 		"url": "http://www.dnd5eapi.co/api/races/4"
+	},
+	{
+		"index": 5,
+		"name": "Dragonborn",
+		"speed": 30,
+		"ability_bonuses": [
+			2,
+			0,
+			0,
+			0,
+			0,
+			1
+		],
+		"alignment": " Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil. Most dragonborn are good, but those who side with evil can be terrible villains.",
+		"age": "Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.",
+		"size": "Medium",
+		"size_description": "Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds. Your size is Medium.",
+		"starting_proficiencies": [],
+		"starting_proficiency_options": {},
+		"languages": [
+			{
+				"url": "http://www.dnd5eapi.co/api/languages/1",
+				"name": "Common"
+			},
+			{
+				"url": "http://www.dnd5eapi.co/api/languages/11",
+				"name": "Draconic"
+			}
+		],
+		"language_options": {
+			
+		},
+		"language_desc": "You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.",
+		"traits": [
+			{
+				"name": "Draconic Anscestry",
+				"url": "http://www.dnd5eapi.co/api/traits/24"
+			},
+			{
+				"name": "Breath Weapon",
+				"url": "http://www.dnd5eapi.co/api/traits/25"
+			},
+			{
+				"name": "Damage Resistance (Dragonborn)",
+				"url": "http://www.dnd5eapi.co/api/traits/36"
+			}
+			
+		],
+		"trait_options": 
+			{
+				"choose": 1,
+				"from": [
+					{
+						"name": "Breath Weapon (Black)",
+						"url": "http://www.dnd5eapi.co/api/traits/26",					
+					},
+					{
+						"name": "Breath Weapon (Blue)",
+						"url": "http://www.dnd5eapi.co/api/traits/27",					
+					},
+					{
+						"name": "Breath Weapon (Brass)",
+						"url": "http://www.dnd5eapi.co/api/traits/28",					
+					},
+					{
+						"name": "Breath Weapon (Bronze)",
+						"url": "http://www.dnd5eapi.co/api/traits/29",					
+					},
+					{
+						"name": "Breath Weapon (Copper)",
+						"url": "http://www.dnd5eapi.co/api/traits/30",					
+					},
+					{
+						"name": "Breath Weapon (Gold)",
+						"url": "http://www.dnd5eapi.co/api/traits/31",					
+					},
+					{
+						"name": "Breath Weapon (Green)",
+						"url": "http://www.dnd5eapi.co/api/traits/32",					
+					},
+					{
+						"name": "Breath Weapon (Red)",
+						"url": "http://www.dnd5eapi.co/api/traits/33",					
+					},
+					{
+						"name": "Breath Weapon (Silver)",
+						"url": "http://www.dnd5eapi.co/api/traits/34",					
+					},
+					{
+						"name": "Breath Weapon (White)",
+						"url": "http://www.dnd5eapi.co/api/traits/35",					
+					}
+				],
+				"type": "trait"
+			},
+		"subraces": [],
+		"url": "http://www.dnd5eapi.co/api/races/5"
 	}
 ]

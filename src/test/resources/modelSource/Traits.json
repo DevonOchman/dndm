@@ -308,5 +308,161 @@
 			"You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
 		],
 		"url": "http://www.dnd5eapi.co/api/traits/23"
-	}
+	},
+	{
+		"index": 24,
+		"name": "Draconic Anscestry",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/24"
+	},
+	{
+		"index": 25,
+		"name": "Breath Weapon",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\nAfter you use your breath weapon, you can’t use it again until you complete a short or long rest."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/25"
+	},
+	{
+		"index": 26,
+		"name": "Breath Weapon (Black)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Acid, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/26"
+	},
+	{
+		"index": 27,
+		"name": "Breath Weapon (Blue)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Lightning, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/27"
+	},
+	{
+		"index": 28,
+		"name": "Breath Weapon (Brass)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Fire, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/28"
+	},
+	{
+		"index": 29,
+		"name": "Breath Weapon (Bronze)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Lightning, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/29"
+	},
+	{
+		"index": 30,
+		"name": "Breath Weapon (Copper)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Acid, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/30"
+	},
+	{
+		"index": 31,
+		"name": "Breath Weapon (Gold)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Fire, Size: 15 ft. Cone, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/31"
+	},
+	{
+		"index": 32,
+		"name": "Breath Weapon (Green)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Poison, Size: 15 ft. Cone, Save: Con."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/32"
+	},
+	{
+		"index": 33,
+		"name": "Breath Weapon (Red)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Fire, Size: 15 ft. Cone, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/33"
+	},
+	{
+		"index": 34,
+		"name": "Breath Weapon (Silver)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Cold, Size: 15 ft. Cone, Save: Con."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/34"
+	},
+	{
+		"index": 35,
+		"name": "Breath Weapon (White)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Cold, Size: 15 ft. Cone, Save: Con."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/35"
+	},
+	{
+		"index": 36,
+		"name": "Damage Resistance (Dragonborn)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"You have resistance to the damage type associated with your draconic ancestry."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/36"
+	},
 ]

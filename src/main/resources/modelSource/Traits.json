@@ -308,5 +308,401 @@
 			"You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
 		],
 		"url": "http://www.dnd5eapi.co/api/traits/23"
+	},
+	{
+		"index": 24,
+		"name": "Draconic Anscestry",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/24"
+	},
+	{
+		"index": 25,
+		"name": "Breath Weapon",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+		"You can use your action to exhale destructive energy.\neach creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry.\nThe DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\nBreath Weapon can be used once per rest."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/25"
+	},
+	{
+		"index": 26,
+		"name": "Breath Weapon (Black)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Acid, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/26"
+	},
+	{
+		"index": 27,
+		"name": "Breath Weapon (Blue)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Lightning, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/27"
+	},
+	{
+		"index": 28,
+		"name": "Breath Weapon (Brass)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Fire, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/28"
+	},
+	{
+		"index": 29,
+		"name": "Breath Weapon (Bronze)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Lightning, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/29"
+	},
+	{
+		"index": 30,
+		"name": "Breath Weapon (Copper)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Acid, Size: 5 by 30 feet, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/30"
+	},
+	{
+		"index": 31,
+		"name": "Breath Weapon (Gold)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Fire, Size: 15 ft. Cone, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/31"
+	},
+	{
+		"index": 32,
+		"name": "Breath Weapon (Green)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Poison, Size: 15 ft. Cone, Save: Con."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/32"
+	},
+	{
+		"index": 33,
+		"name": "Breath Weapon (Red)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Fire, Size: 15 ft. Cone, Save: Dex."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/33"
+	},
+	{
+		"index": 34,
+		"name": "Breath Weapon (Silver)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Cold, Size: 15 ft. Cone, Save: Con."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/34"
+	},
+	{
+		"index": 35,
+		"name": "Breath Weapon (White)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"Damage type: Cold, Size: 15 ft. Cone, Save: Con."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/35"
+	},
+	{
+		"index": 36,
+		"name": "Damage Resistance (Dragonborn)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/5",
+			"name": "Dragonbron"
+		},
+		"desc": [
+			"You have resistance to the damage type associated with your draconic ancestry."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/36"
+	},
+	{
+		"index": 37,
+		"name": "Fleet of Foot",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/subraces/5",
+			"name": "Wood Elf"
+		},
+		"desc": [
+			"Your base walking speed increases to 35 feet."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/37"
+	},
+	{
+		"index": 38,
+		"name": "Mask of the Wild",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/subraces/5",
+			"name": "Wood Elf"
+		},
+		"desc": [
+			"You can attempt to hide even when you are lightly obscured by foliage, heavy rain, falling snow and other natural phenomena."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/38"
+	},
+	{
+		"index": 39,
+		"name": "Superior Darkvision",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/subraces/5",
+			"name": "Dark Elf (Drow)"
+		},
+		"desc": [
+			"Your darkvision has a radius of 120 feet."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/39"
+	},
+	{
+		"index": 40,
+		"name": "Drow Magic",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/subraces/5",
+			"name": "Dark Elf (Drow)"
+		},
+		"desc": [
+			"You have disadvantage on attack roll and on Wisdom (perception) checks that rely on sight when you, the target of your attack or whatever you are trying to perceive is in direct sunlight."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/40"
+	},
+	{
+		"index": 41,
+		"name": "Drow Magic",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/subraces/5",
+			"name": "Dark Elf (Drow)"
+		},
+		"desc": [
+			"You know the dancing light cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach the 5th level, you can cast the darkness spell once per long rest. Charisma is your spellcasting ability for these spells."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/41"
+	},
+	{
+		"index": 42,
+		"name": "Darkvision (Gnome)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/6",
+			"name": "Gnome"
+		},
+		"desc": [
+			"Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/42"
+	},
+	{
+		"index": 43,
+		"name": "Gnome Cunning",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/6",
+			"name": "Gnome"
+		},
+		"desc": [
+			"You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/43"
+	},
+	{
+		"index": 44,
+		"name": "Natural Illusionist",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/subraces/7",
+			"name": "Forest Gnome"
+		},
+		"desc": [
+			"You know the minor illusion cantrip. Intelligence is your spellcasting modifier for it."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/44"
+	},
+	{
+		"index": 45,
+		"name": "Speak with Small Beasts",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/subraces/7",
+			"name": "Forest Gnome"
+		},
+		"desc": [
+			"Through sounds and gestures you can communicate simple ideas with Small or smaller beasts"
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/45"
+	},
+	{
+		"index": 46,
+		"name": "Artificer's Lore",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/subraces/8",
+			"name": "Rock Gnome"
+		},
+		"desc": [
+			"Whenever you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/46"
+	},
+	{
+		"index": 47,
+		"name": "Tinker",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/subraces/8",
+			"name": "Rock Gnome"
+		},
+		"desc": [
+			"You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time. When you create a device, choose one of the following options:\nClockwork Toy: This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.\nFire Starter: The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.\nMusic Box: When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/47"
+	},
+	{
+		"index": 48,
+		"name": "Darkvision (Half-Elf)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/7",
+			"name": "Half-Elf"
+		},
+		"desc": [
+			"Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/48"
+	},
+	{
+		"index": 49,
+		"name": "Fey Ancestry",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/7",
+			"name": "Half-Elf"
+		},
+		"desc": [
+			"You have advantage on saving throws against being charmed, and magic can't put you to sleep."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/49"
+	},
+	{
+		"index": 50,
+		"name": "Skill Versatility",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/7",
+			"name": "Half-Elf"
+		},
+		"desc": [
+			"You gain proficiency in two skills of your choice."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/50"
+	},	
+	{
+		"index": 51,
+		"name": "Darkvision (Half-Orc)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/8",
+			"name": "Half-Orc"
+		},
+		"desc": [
+			"Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray. "
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/51"
+	},	
+	{
+		"index": 52,
+		"name": "Savage Attacks",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/8",
+			"name": "Half-Orc"
+		},
+		"desc": [
+			"When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/52"
+	},	
+	{
+		"index": 53,
+		"name": "Restless Endurance",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/8",
+			"name": "Half-Orc"
+		},
+		"desc": [
+			"When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/53"
+	},
+	{
+		"index": 54,
+		"name": "Darkvision (Tiefling)",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/9",
+			"name": "Tiefling"
+		},
+		"desc": [
+			"Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/54"
+	},
+	{
+		"index": 55,
+		"name": "Hellish Resistance",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/9",
+			"name": "Tiefling"
+		},
+		"desc": [
+			"You have resistance to fire damage."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/55"
+	},
+	{
+		"index": 56,
+		"name": "Infernal Legacy",
+		"race": {
+			"url": "http://www.dnd5eapi.co/api/races/9",
+			"name": "Tiefling"
+		},
+		"desc": [
+			"You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		],
+		"url": "http://www.dnd5eapi.co/api/traits/56"
 	}
 ]

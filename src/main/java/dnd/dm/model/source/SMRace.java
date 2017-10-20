@@ -11,8 +11,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({ "ability_bonuses", "age", "alignment", "index", "language_desc", "languages","language_options", "name",
-		"size_description", "size", "speed", "starting_proficiencies", "starting_proficiency_options", "subraces", "traits", "url" })
+@JsonPropertyOrder({ "ability_bonuses", "age", "alignment", "index", "language_desc", "languages", "language_options",
+		"name", "size_description", "size", "speed", "starting_proficiencies", "starting_proficiency_options",
+		"subraces", "traits", "trait_options", "url" })
 
 public class SMRace implements SMObject {
 
@@ -46,6 +47,8 @@ public class SMRace implements SMObject {
 	private List<SMObjectRef> subraces = null;
 	@JsonProperty("traits")
 	private List<SMObjectRef> traits = null;
+	@JsonProperty("trait_options")
+	private SMObjectChoice traitOptions;
 	@JsonProperty("url")
 	private String url;
 	@JsonIgnore
@@ -80,9 +83,9 @@ public class SMRace implements SMObject {
 	public List<SMObjectRef> getLanguages() {
 		return languages;
 	}
-	
+
 	@JsonProperty("language_options")
-	public SMObjectChoice languageOptions(){
+	public SMObjectChoice languageOptions() {
 		return languageOptions;
 	}
 
@@ -112,10 +115,10 @@ public class SMRace implements SMObject {
 	}
 
 	@JsonProperty("starting_proficiency_options")
-	public SMObjectChoice getStartingProficienciesOptions(){
+	public SMObjectChoice getStartingProficienciesOptions() {
 		return startingProficienciesOptions;
 	}
-	
+
 	@JsonProperty("subraces")
 	public List<SMObjectRef> getSubraces() {
 		return subraces;
@@ -124,6 +127,11 @@ public class SMRace implements SMObject {
 	@JsonProperty("traits")
 	public List<SMObjectRef> getTraits() {
 		return traits;
+	}
+
+	@JsonProperty("trait_options")
+	public SMObjectChoice getTraitOptions() {
+		return this.traitOptions;
 	}
 
 	@JsonProperty("url")
