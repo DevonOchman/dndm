@@ -33,6 +33,8 @@ import dnd.dm.model.source.SMProficiencyFactory;
 import dnd.dm.model.source.SMRaceFactory;
 import dnd.dm.model.source.SMSkillFactory;
 import dnd.dm.model.source.SMSpellFactory;
+import dnd.dm.model.source.SMSpellcastingFactory;
+import dnd.dm.model.source.SMStartingEquipmentFactory;
 import dnd.dm.model.source.SMSubclassFactory;
 import dnd.dm.model.source.SMSubraceFactory;
 import dnd.dm.model.source.SMTraitFactory;
@@ -45,45 +47,52 @@ import dnd.dm.model.source.SMWeaponPropertyFactory;
 
 @Configuration
 @PropertySource(value = "classpath:modelSource.properties")
-public class SourceModelLoader {
+public class SourceModelLibrary {
 
-	private static final Logger log = LoggerFactory.getLogger(SourceModelLoader.class);
+	private static final Logger log = LoggerFactory.getLogger(SourceModelLibrary.class);
 
 	@Value("${dnd.source.json.folder}")
 	private String sourceModelJsonFolder;
 
 	private HashMap<String, SMFactory> factories;
 
-	public SourceModelLoader() {
+	public SourceModelLibrary() {
 		factories = new HashMap<String, SMFactory>();
 
 		//TODO change keys to /class/{i} et al.
-		factories.put("Monsters.json", SMMonsterFactory.getInstance());
-
-		factories.put("Conditions.json", SMConditionFactory.getInstance());
-
-		factories.put("Equipment.json", SMEquipmentFactory.getInstance());
-		factories.put("Damage-Types.json", SMDamageTypeFactory.getInstance());
-		factories.put("Weapon-Properties.json", SMWeaponPropertyFactory.getInstance());
+		factories.put("monsters", SMMonsterFactory.getInstance());
+//
+		factories.put("conditions", SMConditionFactory.getInstance());
+//
+		factories.put("equipment", SMEquipmentFactory.getInstance());
+		factories.put("damage-types", SMDamageTypeFactory.getInstance());
+		factories.put("weapon-properties", SMWeaponPropertyFactory.getInstance());
+//		
+		factories.put("equipment-categories", SMEquipmentCategoryFactory.getInstance());
+//		startingequipment  	TODO test
+		factories.put("startingequipment", SMStartingEquipmentFactory.getInstance());
+//		spellcasting 		TODO test
 		
-		factories.put("Equipment-Categories.json", SMEquipmentCategoryFactory.getInstance());
+		factories.put("spellcasting", SMSpellcastingFactory.getInstance());
+		factories.put("ability-scores", SMAbilityScoreFactory.getInstance());
+		factories.put("proficiencies", SMProficiencyFactory.getInstance());
+		factories.put("languages", SMLanguageFactory.getInstance());
+		factories.put("skills", SMSkillFactory.getInstance());
 		
-		factories.put("Ability-Score.json", SMAbilityScoreFactory.getInstance());
-		factories.put("Proficiencies.json", SMProficiencyFactory.getInstance());
-		factories.put("Languages.json", SMLanguageFactory.getInstance());
-		factories.put("Skills.json", SMSkillFactory.getInstance());
-		
-		factories.put("Classes.json", SMClassFactory.getInstance());
-		factories.put("Subclasses.json", SMSubclassFactory.getInstance());
-		factories.put("Featues.json", SMFeatureFactory.getInstance());
+		factories.put("classes", SMClassFactory.getInstance());
+		factories.put("subclasses", SMSubclassFactory.getInstance());
+		factories.put("features", SMFeatureFactory.getInstance());
+		//TODO figure out how to store level details
+		//subclasses/lore/level/14
+		//classes/wizard/level/18
 		factories.put("Levels.json", SMLevelFactory.getInstance());
 		
-		factories.put("Races.json", SMRaceFactory.getInstance());
-		factories.put("Subraces.json", SMSubraceFactory.getInstance());
-		factories.put("Traits.json", SMTraitFactory.getInstance());
+		factories.put("races", SMRaceFactory.getInstance());
+		factories.put("subraces", SMSubraceFactory.getInstance());
+		factories.put("traits", SMTraitFactory.getInstance());
 		
-		factories.put("Spells.json", SMSpellFactory.getInstance());
-		factories.put("Magic-Schools.json", SMMagicSchoolFactory.getInstance());
+		factories.put("spells", SMSpellFactory.getInstance());
+		factories.put("magic-schools", SMMagicSchoolFactory.getInstance());
 //		
 	}
 

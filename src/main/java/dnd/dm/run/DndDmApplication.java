@@ -10,18 +10,18 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
-import dnd.dm.model.source.load.SourceModelLoader;
+import dnd.dm.model.source.load.SourceModelLibrary;
 
 @SpringBootApplication
 @ComponentScan("dnd.dm.*")
 public class DndDmApplication {
 	
 	@Autowired
-	private SourceModelLoader sourceModelLoader;
+	private SourceModelLibrary sourceModelLoader;
 
 	@Bean
-	public SourceModelLoader sourceModelLoader() throws IOException{
-		return new SourceModelLoader();
+	public SourceModelLibrary sourceModelLoader() throws IOException{
+		return new SourceModelLibrary();
 	}
 	
 	public static void main(String[] args) {
