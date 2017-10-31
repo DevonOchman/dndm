@@ -1,6 +1,7 @@
 package dnd.dm.model.story;
 
 import java.util.List;
+import java.util.Set;
 
 public class Story extends StoryElement {
 	
@@ -9,6 +10,16 @@ public class Story extends StoryElement {
 	private List<Character> characters;
 	
 	private List<Item> items;
+	
+	private Set<LocationMap> grandMap;
+
+	public Set<LocationMap> getGrandMap() {
+		return grandMap;
+	}
+
+	public void setGrandMap(Set<LocationMap> grandMap) {
+		this.grandMap = grandMap;
+	}
 
 	public Story(String name, String description, List<Fact> facts) {
 		super(name, description, facts);

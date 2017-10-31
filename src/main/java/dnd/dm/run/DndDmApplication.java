@@ -23,13 +23,13 @@ import javafx.stage.Stage;
 @ComponentScan("dnd.dm.*")
 public class DndDmApplication extends Application {
 	
-//	@Autowired
-//	private SourceModelLibrary sourceModelLoader;
-//
-//	@Bean
-//	public SourceModelLibrary sourceModelLoader() throws IOException{
-//		return new SourceModelLibrary();
-//	}
+	@Autowired
+	private SourceModelLibrary sourceModelLoader;
+
+	@Bean
+	public SourceModelLibrary sourceModelLoader() throws IOException{
+		return new SourceModelLibrary();
+	}
 	
 	public static void main(String[] args) {
 		ConfigurableApplicationContext appContext = SpringApplication.run(DndDmApplication.class, args);
@@ -40,7 +40,7 @@ public class DndDmApplication extends Application {
 //            System.out.println(bean);
         }
         
-        launch(args);
+//        launch(args);
 	}
 
 	@Override
