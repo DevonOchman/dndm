@@ -2,7 +2,7 @@ package dnd.dm.model.story;
 
 import java.util.List;
 
-public class Path extends StoryElement{
+public class Path extends StoryElement {
 
 	public Path(String name, String description, List<Fact> facts) {
 		super(name, description, facts);
@@ -16,12 +16,9 @@ public class Path extends StoryElement{
 	}
 
 	private Location locationA;
-	
+
 	private Location locationB;
 
-
-
-	
 	public Location getLocationA() {
 		return locationA;
 	}
@@ -34,11 +31,14 @@ public class Path extends StoryElement{
 		return locationB;
 	}
 
-
-
 	public void setLocationB(Location locationB) {
 		this.locationB = locationB;
 	}
-	
-	
+
+	public String toString() {
+		String s = "";
+		s += locationA + " to " + locationB;
+		return s;
+	}
+
 }

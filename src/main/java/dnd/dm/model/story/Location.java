@@ -8,7 +8,7 @@ public class Location extends StoryElement {
 
 	private List<Item> items;
 	
-	private List<Location> subLocations;
+//	private List<Location> subLocations;
 	
 	public List<Character> getCharacters() {
 		return characters;
@@ -39,15 +39,15 @@ public class Location extends StoryElement {
 
 
 
-	public List<Location> getSubLocations() {
-		return subLocations;
-	}
-
-
-
-	public void setSubLocations(List<Location> subLocations) {
-		this.subLocations = subLocations;
-	}
+//	public List<Location> getSubLocations() {
+//		return subLocations;
+//	}
+//
+//
+//
+//	public void setSubLocations(List<Location> subLocations) {
+//		this.subLocations = subLocations;
+//	}
 	
 
 	public void addCharacter(Character c) {
@@ -58,9 +58,8 @@ public class Location extends StoryElement {
 		items.add(i);
 	}
 
-	public void addLocation(Location l) {
-		subLocations.add(l);
-		
-	}
+//	public void addLocation(Location l) {
+//		subLocations.add(l);
+//	}
 
 }

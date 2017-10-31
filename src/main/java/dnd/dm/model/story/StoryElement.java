@@ -45,4 +45,8 @@ public abstract class StoryElement {
 		this.facts =  new ArrayList<Fact>(facts.size());
 		Collections.copy(this.facts, facts);
 	}
+	
+	public String toString(){
+		return name;
+	}
 }

@@ -79,6 +79,25 @@ public class StoryBuilderTest {
 		facts = new ArrayList<Fact>();
 		cavern_end = new Location("Boss Area", "Make the level 2 moster seem like a big deal", facts);
 		
+		sb.addLocation(townA);
+		sb.addLocation(townB);
+		sb.addLocation(cavern);
+		
+		sb.createSimplePath(townA, townB);
+		sb.createSimplePath(townB, cavern);
+		
+		sb.addLocation(cavern_entrance);
+		sb.addLocation(cavern_area1);
+		sb.addLocation(cavern_area2);
+		sb.addLocation(cavern_end);
+		
+		sb.createSimplePath(cavern_entrance, cavern_area1);
+		sb.createSimplePath(cavern_entrance, cavern_area2);
+		sb.createSimplePath(cavern_area1, cavern_end);
+		sb.createSimplePath(cavern_area2, cavern_end);
+		
+		
+		System.out.println(sb.getStory());
 	}
 	
 	@Test
