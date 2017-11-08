@@ -35,6 +35,10 @@ public class Story extends StoryElement {
 		items = new ArrayList<Item>();
 		grandMap = new HashSet<LocationMap>();
 	}
+	
+	public Story(String name, String description){
+		this(name, description, new ArrayList<Fact>());
+	}
 
 	public Set<Location> getLocations() {
 		return unmappedLocations;

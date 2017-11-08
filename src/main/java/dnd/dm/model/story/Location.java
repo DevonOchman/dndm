@@ -1,5 +1,6 @@
 package dnd.dm.model.story;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Location extends StoryElement {
@@ -25,7 +26,10 @@ public class Location extends StoryElement {
 		// TODO Auto-generated constructor stub
 	}
 
-
+	public Location(String name, String description) {
+		super(name, description, new ArrayList<Fact>());
+		// TODO Auto-generated constructor stub
+	}
 
 	public List<Item> getItems() {
 		return items;

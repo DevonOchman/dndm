@@ -44,11 +44,15 @@ public class StoryBuilder {
 		return story;
 	}
 
-	public void createSimplePath(Location a, Location b) {
+	public void createPath(Location a, Location b) {
 		Path a2b = new Path("Simple Path " + a.getName() + ", " + b.getName(),
 				"This is a simple path connecting " + a.getName() + " and " + b.getName(), new ArrayList<Fact>(), a, b);
-
 		this.story.addPathBetween(a, b, a2b);
+	}
+	
+	public void createBidirectionalPath(Location a, Location b){
+		createPath(a,b);
+		createPath(b,a);
 	}
 
 }

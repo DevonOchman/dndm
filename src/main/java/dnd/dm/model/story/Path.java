@@ -1,5 +1,6 @@
 package dnd.dm.model.story;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Path extends StoryElement {
@@ -13,6 +14,10 @@ public class Path extends StoryElement {
 		super(name, description, facts);
 		this.locationA = locationA;
 		this.locationB = locationB;
+	}
+	
+	public Path(Location la, Location lb){
+		this("PathName", "PathDescr", new ArrayList<Fact>(), la, lb);
 	}
 
 	private Location locationA;
@@ -37,7 +42,7 @@ public class Path extends StoryElement {
 
 	public String toString() {
 		String s = "";
-		s += locationA + " to " + locationB;
+		s += locationA + " --> " + locationB;
 		return s;
 	}
 
