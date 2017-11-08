@@ -61,13 +61,13 @@ public class SourceModelLibrary {
 
 		//TODO change keys to /class/{i} et al.
 		factories.put("monsters", SMMonsterFactory.getInstance());
-//
+
 		factories.put("conditions", SMConditionFactory.getInstance());
-//
+
 		factories.put("equipment", SMEquipmentFactory.getInstance());
 		factories.put("damage-types", SMDamageTypeFactory.getInstance());
 		factories.put("weapon-properties", SMWeaponPropertyFactory.getInstance());
-//		
+		
 		factories.put("equipment-categories", SMEquipmentCategoryFactory.getInstance());
 //		startingequipment  	TODO test
 		factories.put("startingequipment", SMStartingEquipmentFactory.getInstance());
@@ -93,7 +93,7 @@ public class SourceModelLibrary {
 		
 		factories.put("spells", SMSpellFactory.getInstance());
 		factories.put("magic-schools", SMMagicSchoolFactory.getInstance());
-//		
+		
 	}
 
 	@PostConstruct
