@@ -1,69 +1,41 @@
 package dnd.dm.model.story;
 
-import java.util.ArrayList;
-import java.util.List;
+public class Location implements ILocation, StoryElement {
 
-public class Location extends StoryElement {
-
-	private List<Character> characters;
-
-	private List<Item> items;
+	private String title;
 	
-//	private List<Location> subLocations;
+	private String descr;
 	
-	public List<Character> getCharacters() {
-		return characters;
-	}
-
-
-
-	public void setCharacters(List<Character> characters) {
-		this.characters = characters;
-	}
-
-	public Location(String name, String description, List<Fact> facts) {
-		super(name, description, facts);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Location(String name, String description) {
-		super(name, description, new ArrayList<Fact>());
-		// TODO Auto-generated constructor stub
-	}
-
-	public List<Item> getItems() {
-		return items;
-	}
-
-
-
-	public void setItems(List<Item> items) {
-		this.items = items;
-	}
-
-
-
-//	public List<Location> getSubLocations() {
-//		return subLocations;
-//	}
-//
-//
-//
-//	public void setSubLocations(List<Location> subLocations) {
-//		this.subLocations = subLocations;
-//	}
-	
-
-	public void addCharacter(Character c) {
-		characters.add(c);
+	public Location(){
+		this("dTitle", "dDescr");
 	}
 	
-	public void addItem(Item i){
-		items.add(i);
+	public Location(String title){
+		this(title, "dDescr");
 	}
 
-//	public void addLocation(Location l) {
-//		subLocations.add(l);
-//	}
+	public Location(String title, String descr) {
+		this.title = title;
+		this.descr = descr;
+	}
 
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDescr() {
+		return descr;
+	}
+
+	public void setDescr(String descr) {
+		this.descr = descr;
+	}
+
+	public String toString(){
+		return title;
+	}
 }

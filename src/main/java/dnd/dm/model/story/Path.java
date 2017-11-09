@@ -1,42 +1,30 @@
 package dnd.dm.model.story;
 
-import java.util.ArrayList;
-import java.util.List;
 
-public class Path extends StoryElement {
+public class Path {
+	
+	private ILocation locationA;
 
-	public Path(String name, String description, List<Fact> facts) {
-		super(name, description, facts);
-		// TODO Auto-generated constructor stub
-	}
+	private ILocation locationB;
 
-	public Path(String name, String description, List<Fact> facts, Location locationA, Location locationB) {
-		super(name, description, facts);
+	public Path(ILocation locationA, ILocation locationB) {
 		this.locationA = locationA;
 		this.locationB = locationB;
 	}
 	
-	public Path(Location la, Location lb){
-		this("PathName", "PathDescr", new ArrayList<Fact>(), la, lb);
-	}
-
-	private Location locationA;
-
-	private Location locationB;
-
-	public Location getLocationA() {
+	public ILocation getLocationA() {
 		return locationA;
 	}
 
-	public void setLocationA(Location locationA) {
+	public void setLocationA(ILocation locationA) {
 		this.locationA = locationA;
 	}
 
-	public Location getLocationB() {
+	public ILocation getLocationB() {
 		return locationB;
 	}
 
-	public void setLocationB(Location locationB) {
+	public void setLocationB(ILocation locationB) {
 		this.locationB = locationB;
 	}
 

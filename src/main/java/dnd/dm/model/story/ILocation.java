@@ -1,5 +1,5 @@
 package dnd.dm.model.story;
 
+public interface ILocation {
 
-public interface StoryElement {
 }
