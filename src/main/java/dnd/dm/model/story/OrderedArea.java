@@ -41,6 +41,26 @@ public class OrderedArea extends AbstractArea<SimpleDirectedWeightedGraph<ILocat
 		}
 	}
 
+	@Override
+	public Set<ILocation> getAccessibleFrom(ILocation l) {
+		Set<ILocation> set = new HashSet<ILocation>();
+		Set<Path> paths = map.outgoingEdgesOf(l);
+		for (Path p : paths) {
+			set.add(p.getLocationB());
+		}
+		return set;
+	}
+
+	@Override
+	public Set<ILocation> getAccessibleBy(ILocation l) {
+		Set<ILocation> set = new HashSet<ILocation>();
+		Set<Path> paths = map.incomingEdgesOf(l);
+		for (Path p : paths) {
+			set.add(p.getLocationA());
+		}
+		return set;
+	}
+
 
 
 

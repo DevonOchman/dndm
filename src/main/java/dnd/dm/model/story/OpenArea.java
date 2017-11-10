@@ -3,14 +3,41 @@ package dnd.dm.model.story;
 import java.util.Set;
 
 import org.jgrapht.EdgeFactory;
-import org.jgrapht.graph.Multigraph;
+import org.jgrapht.graph.SimpleWeightedGraph;
 
-public class OpenArea extends AbstractArea<Multigraph<ILocation, Path>> {
+public class OpenArea extends AbstractArea<SimpleWeightedGraph<ILocation, Path>> {
 
 	@Override
 	public void instantiateMap(EdgeFactory<ILocation, Path> ef) {
-		map = new Multigraph<ILocation, Path>(ef);
+		map = new SimpleWeightedGraph<ILocation, Path>(ef);
 
+	}
+
+	public void addLocation(ILocation l) {
+		if (l == null)
+			throw new NullPointerException();
+		if (!map.containsVertex(l)) {
+			if(entry == null)
+				entry = l;
+			map.addVertex(l);
+			interconnectAll();
+		}
+	}
+	
+	private void interconnectAll(){
+		for (ILocation l1 : map.vertexSet()) {
+			for (ILocation l2 : map.vertexSet()) {
+				if (!l1.equals(l2)) {
+					if (map.getEdge(l1, l2) == null) {
+						map.addEdge(l1, l2);
+					}
+					if (map.getEdge(l2, l1) == null) {
+						map.addEdge(l2, l1);
+					}
+				}
+			}
+
+		}
 	}
 
 	@Override
@@ -21,56 +48,35 @@ public class OpenArea extends AbstractArea<Multigraph<ILocation, Path>> {
 			throw new IllegalArgumentException("ILocation: " + a + " does not exist in this Area.");
 		if (!map.containsVertex(b))
 			throw new IllegalArgumentException("ILocation: " + b + " does not exist in this Area.");
-		for (ILocation l : map.vertexSet()) {
-			if (map.getEdge(l, a) == null) {
-				map.addEdge(l, a);
-			}
-			if (map.getEdge(a, l) == null) {
-				map.addEdge(a, l);
-			}
-			if (map.getEdge(b, a) == null) {
-				map.addEdge(b, a);
-			}
-			if (map.getEdge(a, b) == null) {
-				map.addEdge(a, b);
-			}
-			if (map.getEdge(l, b) == null) {
-				map.addEdge(l, b);
-			}
-			if (map.getEdge(b, l) == null) {
-				map.addEdge(b, l);
-			}
-		}
+		interconnectAll();
 	}
 
 	@SuppressWarnings("rawtypes")
 	@Override
 	public <E extends AbstractArea> void consume(E lm) {
-		if(!(lm instanceof OpenArea)){
+		if (!(lm instanceof OpenArea)) {
 			throw new IllegalArgumentException(lm + " must be an OpenArea to be consumed by this " + this);
 		}
 		OpenArea oArea = (OpenArea) lm;
 		for (ILocation l : oArea.getMap().vertexSet()) {
-			map.addVertex(l);
+			this.addLocation(l);
 		}
-		for (Path p : oArea.getMap().edgeSet()) {
-			map.addEdge(p.getLocationA(), p.getLocationB(), p);
-		}
-		for (ILocation l : oArea.getMap().vertexSet()) {
-			this.addPathBetween(this.entry, l);
-		}
+		// for (Path p : oArea.getMap().edgeSet()) {
+		// map.addEdge(p.getLocationA(), p.getLocationB(), p);
+		// }
+		// for (ILocation l : oArea.getMap().vertexSet()) {
+		// this.addPathBetween(this.entry, l);
+		// }
 	}
 
 	@Override
 	public Set<ILocation> getAccessibleFrom(ILocation l) {
-		// TODO Auto-generated method stub
-		return null;
+		return map.vertexSet();
 	}
 
 	@Override
 	public Set<ILocation> getAccessibleBy(ILocation l) {
-		// TODO Auto-generated method stub
-		return null;
+		return map.vertexSet();
 	}
 
 }

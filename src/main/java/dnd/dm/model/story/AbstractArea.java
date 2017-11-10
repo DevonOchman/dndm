@@ -16,7 +16,7 @@ import org.jgrapht.alg.interfaces.ShortestPathAlgorithm.SingleSourcePaths;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.alg.shortestpath.AllDirectedPaths;
 
-public abstract class AbstractArea<T extends AbstractBaseGraph<ILocation, Path>> implements ILocation {
+public abstract class AbstractArea<T extends AbstractGraph<ILocation, Path>> implements ILocation {
 
 	protected T map;
 
@@ -33,7 +33,6 @@ public abstract class AbstractArea<T extends AbstractBaseGraph<ILocation, Path>>
 			}
 
 		};
-		// new ClassBasedEdgeFactory<ILocation, Path>(Path.class);
 		instantiateMap(ef);
 	}
 
@@ -42,7 +41,8 @@ public abstract class AbstractArea<T extends AbstractBaseGraph<ILocation, Path>>
 	public void addExitLocation(ILocation l) {
 		if (l == null)
 			throw new NullPointerException("Cannot accept null ILocation as parameter.");
-		map.addVertex(l);
+		if (!map.containsVertex(l))
+			throw new IllegalArgumentException("Area does not contain ILocation: " + l);
 		exit = l;
 	}
 
@@ -105,28 +105,14 @@ public abstract class AbstractArea<T extends AbstractBaseGraph<ILocation, Path>>
 	 * @param l
 	 * @return Set of ILocation which have Edges that start with ILocation l
 	 */
-	public Set<ILocation> getAccessibleFrom(ILocation l) {
-		Set<ILocation> set = new HashSet<ILocation>();
-		Set<Path> paths = map.outgoingEdgesOf(l);
-		for (Path p : paths) {
-			set.add(p.getLocationB());
-		}
-		return set;
-	}
+	public abstract Set<ILocation> getAccessibleFrom(ILocation l);
 
 	/**
 	 * 
 	 * @param l
 	 * @return Set of ILocation that have Edges that lead to ILocation l
 	 */
-	public Set<ILocation> getAccessibleBy(ILocation l) {
-		Set<ILocation> set = new HashSet<ILocation>();
-		Set<Path> paths = map.incomingEdgesOf(l);
-		for (Path p : paths) {
-			set.add(p.getLocationA());
-		}
-		return set;
-	}
+	public abstract Set<ILocation> getAccessibleBy(ILocation l);
 
 	public String toString() {
 		String s = this.getClass().getSimpleName() + ": [\n";
