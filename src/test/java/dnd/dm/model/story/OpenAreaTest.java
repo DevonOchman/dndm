@@ -23,14 +23,14 @@ public class OpenAreaTest {
 
 	@Before
 	public void init() {
-		oArea = new OpenArea();
+		oArea = new OpenArea("Test Open Area");
 
 		assertEquals(SimpleWeightedGraph.class, oArea.getMap().getClass());
 	}
 	
 	@Test
 	public void testAddLocation(){
-		OpenArea oa = new OpenArea();
+		OpenArea oa = new OpenArea("Test Open Area");
 		Location l = new Location("1", "nn");
 		oa.addLocation(l);
 		assertTrue(oa.getMap().containsVertex(l));
@@ -38,9 +38,9 @@ public class OpenAreaTest {
 	
 	@Test
 	public void testConsume(){
-		OpenArea oa1 = new OpenArea();
-		OpenArea oa2 = new OpenArea();
-		OpenArea oa3 = new OpenArea();
+		OpenArea oa1 = new OpenArea("Test Open Area");
+		OpenArea oa2 = new OpenArea("Test Open Area");
+		OpenArea oa3 = new OpenArea("Test Open Area");
 		Location l1 = new Location("1", "nn");
 		Location l2 = new Location("2", "nn");
 		Location l3 = new Location("3", "nn");
@@ -63,7 +63,7 @@ public class OpenAreaTest {
 	
 	@Test
 	public void testContains(){
-		OpenArea oa = new OpenArea();
+		OpenArea oa = new OpenArea("Test Open Area");
 		Location l = new Location("not default", "nn");
 		assertFalse(oa.contains(l));
 		assertFalse(oa.contains(null));
@@ -73,7 +73,7 @@ public class OpenAreaTest {
 	
 	@Test
 	public void testAddFirstLocation() {
-		OpenArea oa = new OpenArea();
+		OpenArea oa = new OpenArea("Test Open Area");
 		Location l = new Location("not default", "nn");
 		oa.addFirstLocation(l);
 		assertEquals(l, oa.getEntry());
@@ -86,7 +86,7 @@ public class OpenAreaTest {
 
 	@Test
 	public void testAddExitLocation() {
-		OpenArea oa = new OpenArea();
+		OpenArea oa = new OpenArea("Test Open Area");
 		Location l = new Location("not default", "nn");
 		oa.addFirstLocation(l);
 		oa.addExitLocation(l);
@@ -102,19 +102,19 @@ public class OpenAreaTest {
 	public void testAddLocationAfter() {
 		Location l1 = new Location("not default", "nn");
 		Location l2 = new Location("After", "nn");
-		OpenArea oa = new OpenArea();
+		OpenArea oa = new OpenArea("Test Open Area");
 		try {
 			oa.addLocationAfter(null, l2);
 			fail();
 		} catch (NullPointerException e) {
 		}
-		oa = new OpenArea();
+		oa = new OpenArea("Test Open Area");
 		try {
 			oa.addLocationAfter(l1, null);
 			fail();
 		} catch (NullPointerException e) {
 		}
-		oa = new OpenArea();
+		oa = new OpenArea("Test Open Area");
 		oa.addFirstLocation(l1);
 		try {
 			oa.addLocationAfter(l2, l1);
@@ -125,7 +125,7 @@ public class OpenAreaTest {
 		Path p = oa.getMap().getEdge(l1, l2);
 		assertNotNull(p);
 
-		oa = new OpenArea();
+		oa = new OpenArea("Test Open Area");
 		oa.addFirstLocation(l1);
 		oa.addLocationAfter(l1, l2);
 		p = oa.getMap().getEdge(l1, l2);
@@ -137,27 +137,27 @@ public class OpenAreaTest {
 		Location l1 = new Location("not default", "nn");
 		Location l2 = new Location("After", "nn");
 		Location l3 = new Location("Third", "nn");
-		OpenArea oa = new OpenArea();
+		OpenArea oa = new OpenArea("Test Open Area");
 		try {
 			oa.addPathBetween(null, l2);
 			fail();
 		} catch (NullPointerException e) {
 		}
-		oa = new OpenArea();
+		oa = new OpenArea("Test Open Area");
 		try {
 			oa.addPathBetween(l1, null);
 			fail();
 		} catch (NullPointerException e) {
 		}
 
-		oa = new OpenArea();
+		oa = new OpenArea("Test Open Area");
 		try {
 			oa.addPathBetween(l1, l2);
 			fail();
 		} catch (IllegalArgumentException e) {
 		}
 
-		oa = new OpenArea();
+		oa = new OpenArea("Test Open Area");
 		oa.addFirstLocation(l1);
 		oa.addLocationAfter(l1, l2);
 		oa.addLocationAfter(l2, l3);

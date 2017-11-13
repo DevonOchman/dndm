@@ -9,6 +9,10 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 public class OrderedArea extends AbstractArea<SimpleDirectedWeightedGraph<ILocation,Path>>{
 
+	public OrderedArea(String name) {
+		super(name);
+	}
+
 	@Override
 	public void instantiateMap(EdgeFactory<ILocation, Path> ef) {
 		this.map = new SimpleDirectedWeightedGraph<ILocation,Path>(ef);
@@ -60,8 +64,4 @@ public class OrderedArea extends AbstractArea<SimpleDirectedWeightedGraph<ILocat
 		}
 		return set;
 	}
-
-
-
-
 }

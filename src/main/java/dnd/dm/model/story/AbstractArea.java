@@ -18,13 +18,20 @@ import org.jgrapht.alg.shortestpath.AllDirectedPaths;
 
 public abstract class AbstractArea<T extends AbstractGraph<ILocation, Path>> implements ILocation {
 
+	private String name;
+
 	protected T map;
 
 	protected ILocation entry;
 
 	protected ILocation exit;
 
-	public AbstractArea() {
+	public AbstractArea(String name) {
+		this();
+		this.setName(name);
+	}
+
+	private AbstractArea() {
 		EdgeFactory<ILocation, Path> ef = new EdgeFactory<ILocation, Path>() {
 
 			@Override
@@ -98,6 +105,20 @@ public abstract class AbstractArea<T extends AbstractGraph<ILocation, Path>> imp
 	}
 
 	@SuppressWarnings("rawtypes")
+	public AbstractArea getAreaWith(ILocation l) {
+		for (ILocation v : map.vertexSet()) {
+			if (v.equals(l)) {
+				return this;
+			} else if (v instanceof AbstractArea) {
+				AbstractArea t = ((AbstractArea) v).getAreaWith(l);
+				if (t != null)
+					return t;
+			}
+		}
+		return null;
+	}
+
+	@SuppressWarnings("rawtypes")
 	public abstract <E extends AbstractArea> void consume(E lm);
 
 	/**
@@ -115,7 +136,7 @@ public abstract class AbstractArea<T extends AbstractGraph<ILocation, Path>> imp
 	public abstract Set<ILocation> getAccessibleBy(ILocation l);
 
 	public String toString() {
-		String s = this.getClass().getSimpleName() + ": [\n";
+		String s = this.getClass().getSimpleName() + " " + name + ": [";
 		// AllDirectedPaths<Location, Path> ad = new AllDirectedPaths<Location,
 		// Path>(map);
 		// for (Location v1 : map.vertexSet()) {
@@ -143,6 +164,14 @@ public abstract class AbstractArea<T extends AbstractGraph<ILocation, Path>> imp
 			}
 		}
 		return s + "]";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

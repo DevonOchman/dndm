@@ -7,6 +7,10 @@ import org.jgrapht.graph.SimpleWeightedGraph;
 
 public class OpenArea extends AbstractArea<SimpleWeightedGraph<ILocation, Path>> {
 
+	public OpenArea(String name) {
+		super(name);
+	}
+
 	@Override
 	public void instantiateMap(EdgeFactory<ILocation, Path> ef) {
 		map = new SimpleWeightedGraph<ILocation, Path>(ef);

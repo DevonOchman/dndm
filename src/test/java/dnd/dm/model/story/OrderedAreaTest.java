@@ -21,14 +21,14 @@ public class OrderedAreaTest {
 
 	@Before
 	public void init() {
-		oArea = new OrderedArea();
+		oArea = new OrderedArea("Test Ordered Area");
 
 		assertEquals(SimpleDirectedWeightedGraph.class, oArea.getMap().getClass());
 	}
 
 	@Test
 	public void testGetAccessibleBy() {
-		OrderedArea oa = new OrderedArea();
+		OrderedArea oa = new OrderedArea("Test Ordered Area");
 		Location l1 = new Location("1", "nn");
 		Location l2 = new Location("2", "nn");
 		Location l3 = new Location("3", "nn");
@@ -46,7 +46,7 @@ public class OrderedAreaTest {
 
 	@Test
 	public void testGetAccessibleFrom() {
-		OrderedArea oa = new OrderedArea();
+		OrderedArea oa = new OrderedArea("Test Ordered Area");
 		Location l1 = new Location("1", "nn");
 		Location l2 = new Location("2", "nn");
 		Location l3 = new Location("3", "nn");
@@ -65,9 +65,9 @@ public class OrderedAreaTest {
 
 	@Test
 	public void testConsume() {
-		OrderedArea oa1 = new OrderedArea();
-		OrderedArea oa2 = new OrderedArea();
-		OrderedArea oa3 = new OrderedArea();
+		OrderedArea oa1 = new OrderedArea("Test Ordered Area");
+		OrderedArea oa2 = new OrderedArea("Test Ordered Area");
+		OrderedArea oa3 = new OrderedArea("Test Ordered Area");
 		Location l1 = new Location("1", "nn");
 		Location l2 = new Location("2", "nn");
 		Location l3 = new Location("3", "nn");
@@ -92,7 +92,7 @@ public class OrderedAreaTest {
 
 	@Test
 	public void testContains() {
-		OrderedArea oa = new OrderedArea();
+		OrderedArea oa = new OrderedArea("Test Ordered Area");
 		Location l = new Location("not default", "nn");
 		assertFalse(oa.contains(l));
 		assertFalse(oa.contains(null));
@@ -102,7 +102,7 @@ public class OrderedAreaTest {
 
 	@Test
 	public void testAddFirstLocation() {
-		OrderedArea oa = new OrderedArea();
+		OrderedArea oa = new OrderedArea("Test Ordered Area");
 		Location l = new Location("not default", "nn");
 		oa.addFirstLocation(l);
 		assertEquals(l, oa.getEntry());
@@ -115,7 +115,7 @@ public class OrderedAreaTest {
 
 	@Test
 	public void testAddExitLocation() {
-		OrderedArea oa = new OrderedArea();
+		OrderedArea oa = new OrderedArea("Test Ordered Area");
 		Location l = new Location("not default", "nn");
 		oa.addFirstLocation(l);
 		oa.addExitLocation(l);
@@ -131,19 +131,19 @@ public class OrderedAreaTest {
 	public void testAddLocationAfter() {
 		Location l1 = new Location("not default", "nn");
 		Location l2 = new Location("After", "nn");
-		OrderedArea oa = new OrderedArea();
+		OrderedArea oa = new OrderedArea("Test Ordered Area");
 		try {
 			oa.addLocationAfter(null, l2);
 			fail();
 		} catch (NullPointerException e) {
 		}
-		oa = new OrderedArea();
+		oa = new OrderedArea("Test Ordered Area");
 		try {
 			oa.addLocationAfter(l1, null);
 			fail();
 		} catch (NullPointerException e) {
 		}
-		oa = new OrderedArea();
+		oa = new OrderedArea("Test Ordered Area");
 		oa.addFirstLocation(l1);
 		try {
 			oa.addLocationAfter(l2, l1);
@@ -154,7 +154,7 @@ public class OrderedAreaTest {
 		Path p = oa.getMap().getEdge(l1, l2);
 		assertNotNull(p);
 
-		oa = new OrderedArea();
+		oa = new OrderedArea("Test Ordered Area");
 		oa.addFirstLocation(l1);
 		oa.addLocationAfter(l1, l2);
 		p = oa.getMap().getEdge(l1, l2);
@@ -166,27 +166,27 @@ public class OrderedAreaTest {
 		Location l1 = new Location("not default", "nn");
 		Location l2 = new Location("After", "nn");
 		Location l3 = new Location("Third", "nn");
-		OrderedArea oa = new OrderedArea();
+		OrderedArea oa = new OrderedArea("Test Ordered Area");
 		try {
 			oa.addPathBetween(null, l2);
 			fail();
 		} catch (NullPointerException e) {
 		}
-		oa = new OrderedArea();
+		oa = new OrderedArea("Test Ordered Area");
 		try {
 			oa.addPathBetween(l1, null);
 			fail();
 		} catch (NullPointerException e) {
 		}
 
-		oa = new OrderedArea();
+		oa = new OrderedArea("Test Ordered Area");
 		try {
 			oa.addPathBetween(l1, l2);
 			fail();
 		} catch (IllegalArgumentException e) {
 		}
 
-		oa = new OrderedArea();
+		oa = new OrderedArea("Test Ordered Area");
 		oa.addFirstLocation(l1);
 		oa.addLocationAfter(l1, l2);
 		oa.addLocationAfter(l2, l3);

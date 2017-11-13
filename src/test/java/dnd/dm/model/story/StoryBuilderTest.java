@@ -16,83 +16,65 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class StoryBuilderTest {
 
 	StoryBuilder sb;
-	/*
-	 * Path: townA -> townB -> cavern
-	 */
-	Location townA;
-	Location townB;
-	Location cavern;
 	
-	/*
-	 * Interconnected. In townA.
-	 */
-	Location tavern;
-	Location smithy;
-	Location shop;
+	Location l1 = new Location("L1");
+	Location l2 = new Location("L2");
+	Location l3 = new Location("L3");
+	Location l4 = new Location("L4");
+	Location l5 = new Location("L5");
+	Location l6 = new Location("L6");
+	Location l7 = new Location("L7");
+	Location l8 = new Location("L8");
+	Location l9 = new Location("L9");
+	Location l10 = new Location("L10");
+	Location l11 = new Location("L11");
+	Location l12 = new Location("L12");
+	Location l13 = new Location("L13");
+	Location l14 = new Location("L14");
 	
-	/*
-	 * Interconnected. In townB
-	 */
-	Location mansion;
-	Location hideout;
+	OrderedArea ora1 = new OrderedArea("ora1");
+	OrderedArea ora2 = new OrderedArea("ora2");
+	OrderedArea ora3 = new OrderedArea("ora3");
 	
-	/*
-	 * Path: cavern_entrace -> cavern_area1 -> cavern_end
-	 * Path: cavern_entrace -> cavern_area2 -> cavern_end
-	 * Path: cavern_end -> cavern_entrance (reverse not possible).
-	 */
-	Location cavern_entrance;
-	Location cavern_area1;
-	Location cavern_area2;
-	Location cavern_end;
+	OpenArea opa1 = new OpenArea("opa1");
+	OpenArea opa2 = new OpenArea("opa2");
 	
 	@Before
 	public void init(){
-//		sb = new StoryBuilder(new Story("Test Story", "Test story description"));
-//		
-//		townA = new Location("TownA", "This is the first town of out adventure");
-//		townB = new Location("TownB", "The second town we come accross");
-//		cavern = new Location("Cavern", "Here the PCs will enter combat for the first time");
-//		
-//		tavern = new Location("UglyDuckling", "The Tavern in which our PCs meet");
-//		smithy = new Location("Smith", "Here there be weapons");
-//		shop = new Location("Shop", "You can't afford any of this yet");
-//		
-//		mansion = new Location("Mansion", "Do ye be trying to steal?");
-//		hideout = new Location("Hideout", "What are you hidhing for?");
-//		
-//		cavern_entrance = new Location("Entry", "Spooky");
-//		cavern_area1 = new Location("Path One", "It seems safer");
-//		cavern_area2 = new Location("Path Two", "The safe path");
-//		cavern_end = new Location("Boss Area", "Make the level 2 moster seem like a big deal");
-//		
-//		sb.addLocation(townA);
-//		sb.addLocation(townB);
-//		sb.addLocation(cavern);
-//		
-//		sb.createBidirectionalPath(townA, townB);
-//		sb.createBidirectionalPath(townB, cavern);
-//		
-//		sb.addLocation(cavern_entrance);
-//		sb.addLocation(cavern_area1);
-//		sb.addLocation(cavern_area2);
-//		sb.addLocation(cavern_end);
-//		
-//		sb.createBidirectionalPath(cavern_entrance, cavern_area1);
-//		sb.createBidirectionalPath(cavern_entrance, cavern_area2);
-//		sb.createBidirectionalPath(cavern_area1, cavern_end);
-//		sb.createBidirectionalPath(cavern_area2, cavern_end);
-//		sb.createPath(cavern_end, cavern_entrance);
-//		
-//		
-//		System.out.println(sb.getStory());
+		sb = new StoryBuilder();
+		sb.addAreaToRoot(ora1, null);
+		sb.addAreaToRoot(opa1, ora1);
+		sb.addAreaToRoot(ora2, opa1);
+		
+		sb.addLocation(ora1, l1, null);
+		sb.addLocation(ora1, l2, l1);
+		sb.addLocation(ora1, l3, l2);
+		sb.addLocation(ora1, l2, l3);
+		sb.addLocation(ora1, l4, l2);
+		sb.addLocation(ora1, l4, l3);
+		
+		sb.addLocation(opa1, l5, null);
+		sb.addLocation(null, l6, l5);
+		sb.addLocation(null, l7, l5);
+		
+		sb.addLocation(ora2, opa2, null);
+		sb.addLocation(null, l10, opa2);
+		sb.addLocation(null, ora3, l10);
+		
+		sb.addLocation(opa2, l8, null);
+		sb.addLocation(null, l9, l8);
+		
+		sb.addLocation(ora3, l11, null);
+		sb.addLocation(null, l12, l11);
+		sb.addLocation(null, l13, l11);
+		sb.addLocation(null, l12, l13);
+		sb.addLocation(null, l13, l12);
+		sb.addLocation(null, l14, l13);
+		int i = 0;
 	}
 	
 	@Test
 	public void testSetStory(){
-//		Story initStory = sb.getStory();
-//		Story newStory = new Story("New Test Story", "A new test story description", new ArrayList<Fact>());
-//		sb.setStory(newStory);
-//		assertNotSame(initStory, sb.getStory());
+
 	}
 }
