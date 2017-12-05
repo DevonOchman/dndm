@@ -1,6 +1,5 @@
 package dnd.dm.model.story;
 
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 import java.util.HashSet;

@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 import dnd.dm.model.source.load.SourceModelLibrary;
+import dnd.dm.model.story.OrderedArea;
 import dnd.dm.view.Window;
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -32,6 +33,7 @@ public class DndDmApplication extends Application {
 	}
 	
 	public static void main(String[] args) {
+		OrderedArea oa1 = new OrderedArea("Test Ordered Area");
 		ConfigurableApplicationContext appContext = SpringApplication.run(DndDmApplication.class, args);
 		
 		String[] beans = appContext.getBeanDefinitionNames();
